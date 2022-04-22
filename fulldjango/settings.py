@@ -171,10 +171,7 @@ CORS_ALLOW_METHODS = (
     'PUT',
 )
 
-CSRF_TRUSTED_ORIGINS = (
-    '127.0.0.1:9200',
-    '*'
-)
+
 
 CORS_ALLOW_HEADERS = (
     'accept',
