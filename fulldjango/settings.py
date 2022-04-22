@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'drf_yasg',
+    'corsheaders',
 
     'sample',
     'rest_framework',
@@ -155,13 +156,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 ORS_ALLOW_CREDENTIALS = True
 ACCESS_CONTROL_ALLOW_HEADERS = True
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:4200',
-    'localhost:8000',
-    '127.0.0.1:8000',
-
-)
-
 CORS_ALLOW_METHODS = (
     'DELETE',
     'GET',
@@ -170,7 +164,6 @@ CORS_ALLOW_METHODS = (
     'POST',
     'PUT',
 )
-
 
 CORS_ALLOW_HEADERS = (
     'accept',
@@ -182,4 +175,5 @@ CORS_ALLOW_HEADERS = (
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+    '*'
 )
