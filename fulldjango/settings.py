@@ -148,6 +148,7 @@ SWAGGER_SETTINGS = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://ec2-52-66-244-25.ap-south-1.compute.amazonaws.com:8080",
+    "http://ec2-52-66-244-25.ap-south-1.compute.amazonaws.com",
     "http://127.0.0.1:9000",
 ]
 CORS_ORIGIN_ALLOW_ALL = True
