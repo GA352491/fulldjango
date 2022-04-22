@@ -35,7 +35,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
+
     'sample',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -117,3 +121,27 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+COGNITO_AWS_REGION = 'ap-south-1'  # 'eu-central-1'
+COGNITO_USER_POOL = 'ap-south-1_naR1NxJe2'  # 'eu-central-1_xYzaq'
+COGNITO_AUDIENCE = '53cnie8g86gldjrg3hsknbuhck'
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'django_cognito_jwt.JSONWebTokenAuthentication',
+#     ],
+# }
+
+# COGNITO_USER_MODEL = "myproject.AppUser"
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        },
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    }
+}
