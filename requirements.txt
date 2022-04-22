@@ -42,3 +42,4 @@ sqlparse==0.4.2
 uritemplate==4.1.1
 urllib3==1.26.9
 uWSGI==2.0.20
+django-cors-headers==3.10.0
